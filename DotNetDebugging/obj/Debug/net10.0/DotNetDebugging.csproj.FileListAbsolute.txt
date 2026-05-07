@@ -1,0 +1,14 @@
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\bin\Debug\net10.0\DotNetDebugging.exe
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\bin\Debug\net10.0\DotNetDebugging.deps.json
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\bin\Debug\net10.0\DotNetDebugging.runtimeconfig.json
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\bin\Debug\net10.0\DotNetDebugging.dll
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\bin\Debug\net10.0\DotNetDebugging.pdb
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\obj\Debug\net10.0\DotNetDebugging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\obj\Debug\net10.0\DotNetDebugging.AssemblyInfoInputs.cache
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\obj\Debug\net10.0\DotNetDebugging.AssemblyInfo.cs
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\obj\Debug\net10.0\DotNetDebugging.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\obj\Debug\net10.0\DotNetDebugging.dll
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\obj\Debug\net10.0\refint\DotNetDebugging.dll
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\obj\Debug\net10.0\DotNetDebugging.pdb
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\obj\Debug\net10.0\DotNetDebugging.genruntimeconfig.cache
+C:\Users\user\Downloads\BYU_Pathway\CSE325 - .NET Software Development\.NET Tutorials\DotNetDebugging\obj\Debug\net10.0\ref\DotNetDebugging.dll
