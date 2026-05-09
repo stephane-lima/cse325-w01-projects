@@ -1,0 +1,195 @@
+******************************************************
+PART 1: WORK WITH FILES AND DIRECTORIES IN A .NET APP
+******************************************************
+
+using System.Globalization;
+
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+
+var salesFiles = FindFiles(storesDirectory);
+
+File.WriteAllText(Path.Combine(salesTotalDir, "salesReport.txt"), GenerateSalesReport(salesFiles));
+
+string GenerateSalesReport(IEnumerable<string> salesFiles)
+{
+    double salesTotal = CalculateSalesTotal(salesFiles);
+
+    string salesReport = "Sales Summary\n";
+    salesReport += "-------------------------------------------------\n";
+    salesReport += $"Total Sales: {salesTotal:C}\n\n";
+    salesReport += "Details:";
+
+    var findFiles = FindFiles("stores");
+
+    foreach (var file in findFiles)
+    {
+        if (file.EndsWith("sales.json"))
+        {
+            string salesJson = File.ReadAllText(file);
+            SalesData? data = JsonConvert.DeserializeObject<SalesData?>(salesJson);
+
+            salesReport += $"\n{file}: {data?.Total:C}";
+        }
+    }
+
+    return salesReport;
+}
+
+record SalesData (double Total);
+
+
+
+*******************************************************
+PART 2: CREATE A WEB API WITH ASP.NET CORE CONTROLLERS
+*******************************************************
+
+1. GET Method
+
+GET {{ContosoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 09 May 2026 22:54:24 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  },
+  {
+    "id": 3,
+    "name": "Margherita",
+    "isGlutenFree": false
+  }
+]
+
+###
+2. POST Method
+
+POST {{ContosoPizza_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+    "name": "Four Cheese",
+    "isGlutenFree": true
+}
+
+HTTP/1.1 201 Created
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 09 May 2026 22:55:13 GMT
+Server: Kestrel
+Location: http://localhost:5048/Pizza/4
+Transfer-Encoding: chunked
+
+{
+  "id": 4,
+  "name": "Four Cheese",
+  "isGlutenFree": true
+}
+
+###
+3. GET(id) Method
+
+GET {{ContosoPizza_HostAddress}}/pizza/4
+Accept: application/json
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 09 May 2026 23:00:06 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+{
+  "id": 4,
+  "name": "Four Cheese",
+  "isGlutenFree": true
+}
+
+###
+4. PUT Method
+
+PUT {{ContosoPizza_HostAddress}}/pizza/4
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "Pepperoni",
+    "isGlutenFree": false
+}
+
+HTTP/1.1 204 No Content
+Connection: close
+Date: Sat, 09 May 2026 23:04:09 GMT
+Server: Kestrel
+
+###
+5. GET(id) Method
+
+GET {{ContosoPizza_HostAddress}}/pizza/4
+Accept: application/json
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 09 May 2026 23:04:27 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+{
+  "id": 4,
+  "name": "Pepperoni",
+  "isGlutenFree": false
+}
+
+###
+6. DELETE Method
+
+DELETE {{ContosoPizza_HostAddress}}/pizza/4
+
+HTTP/1.1 204 No Content
+Connection: close
+Date: Sat, 09 May 2026 23:06:37 GMT
+Server: Kestrel
+
+###
+7. GET Method
+
+GET {{ContosoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 09 May 2026 23:08:03 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  },
+  {
+    "id": 3,
+    "name": "Margherita",
+    "isGlutenFree": false
+  }
+]

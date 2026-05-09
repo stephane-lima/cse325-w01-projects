@@ -42,3 +42,29 @@ Accept: application/json
 DELETE {{ContosoPizza_HostAddress}}/pizza/3
 
 ###
+POST {{ContosoPizza_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+    "name": "Four Cheese",
+    "isGlutenFree": true
+}
+
+###
+GET {{ContosoPizza_HostAddress}}/pizza/4
+Accept: application/json
+
+###
+PUT {{ContosoPizza_HostAddress}}/pizza/4
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "Pepperoni",
+    "isGlutenFree": false
+}
+
+###
+DELETE {{ContosoPizza_HostAddress}}/pizza/4
+
+###
