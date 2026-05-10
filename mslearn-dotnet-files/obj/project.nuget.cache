@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+/+bqqzHMog=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Downloads\\BYU_Pathway\\CSE325 - .NET Software Development\\cse325-w01-projects\\mslearn-dotnet-files\\mslearn-dotnet-files.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
